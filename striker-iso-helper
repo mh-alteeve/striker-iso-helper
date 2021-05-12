@@ -1,0 +1,24 @@
+#!/usr/bin/env perl
+#
+# This script reports whether useful Anvil ISOs are out of date with upstream
+#
+# Return Codes:
+# 0 = OK
+# 1 = Not run on an Anvil Host
+
+use warnings;
+use strict;
+
+# Who am I and where am I?
+my $THIS_FILE           =  ($0 =~ /^.*\/(.*)$/)[0];
+my $running_directory   =  ($0 =~ /^(.*?)\/$THIS_FILE$/)[0];
+if (($running_directory =~ /^\./) && ($ENV{PWD}))
+{
+	$running_directory =~ s/^\./$ENV{PWD}/;
+}
+
+# Setting some paths
+
+my $configuration = {
+
+}
