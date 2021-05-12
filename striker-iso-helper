@@ -4,7 +4,7 @@
 #
 # Return Codes:
 # 0 = OK
-# 1 = Not run on an Anvil Host
+# 1 = Not run on a Node
 
 use warnings;
 use strict;
@@ -20,5 +20,13 @@ if (($running_directory =~ /^\./) && ($ENV{PWD}))
 # Setting some paths
 
 my $configuration = {
+	debug		=>	1,
+	datestamp	=>	'date +\%F',
+	path		=>	{
+					iso_locations		=>	{
+										shared_files	=> '/shared/files/';
+									}
+					definitions_location	=>	'/shared/definitions';
+				}
 
 }
